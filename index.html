@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Card Payment</title>
+  <title>Finsera Client Portal</title>
   <link rel="stylesheet" href="./assets/style.css" />
 </head>
 <body>
@@ -12,22 +12,22 @@
   <section class="card">
     <div class="card__inner">
 
-      <h2 class="title">Card Details</h2>
+      <h2 class="title">Client Portal</h2>
 
       <!-- Name -->
       <div class="field" id="fName">
-        <input id="fullName" type="text" placeholder="Full Name *" autocomplete="cc-name" />
+        <input id="fullName" type="text" placeholder="Full Name *" autocomplete="name" />
         <div class="hint">Please enter your full name.</div>
       </div>
 
       <!-- Card number -->
       <div class="field" id="fCard">
-        <input id="cardNumber" type="text" placeholder="Card Number *" autocomplete="cc-number" inputmode="numeric" />
-        <div class="hint" id="cardHint">Card number must be 16 digits and valid.</div>
+        <input id="cardNumber" type="text" placeholder="16 digits *" autocomplete="off" inputmode="numeric" />
+        <div class="hint" id="cardHint">reference number must be 16 digits and valid.</div>
       </div>
 
       <!-- Logos -->
-      <div class="accepted-logos" aria-label="Supported payment networks">
+      <div class="accepted-logos" aria-label="recognized networks">
         <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Visa%202021.svg" alt="Visa" class="logo visa" loading="lazy" />
         <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mastercard%202019%20logo.svg" alt="Mastercard" class="logo mastercard" loading="lazy" />
         <img src="https://commons.wikimedia.org/wiki/Special:FilePath/SWIFT%202021%20logo.svg" alt="SWIFT" class="logo swift" loading="lazy" />
@@ -37,7 +37,7 @@
       <!-- Amount + Currency -->
       <div class="amountRow">
         <div class="field" id="fAmount">
-          <input id="amount" type="text" placeholder="Amount *" inputmode="decimal" />
+          <input id="amount" type="text" placeholder="Amount *" autocomplete="off" inputmode="decimal" />
           <div class="hint">Enter a valid amount.</div>
         </div>
 
@@ -57,19 +57,19 @@
       <!-- Exp + CVC -->
       <div class="row">
         <div class="field" id="fExp">
-          <input id="exp" type="text" placeholder="Expiration (MM/YY) *" autocomplete="cc-exp" inputmode="numeric" />
-          <div class="hint">Invalid expiration date.</div>
+          <input id="exp" type="text" placeholder="Expiry (MM/YY) *" autocomplete="off" inputmode="numeric" />
+          <div class="hint">Invalid  date.</div>
         </div>
 
         <div class="field" id="fCvc">
-          <input id="cvc" type="password" placeholder="CVC *" autocomplete="cc-csc" inputmode="numeric" />
-          <button class="iconBtn" id="toggleCvc" type="button" aria-label="Show/Hide CVC">
+          <input id="cvc" type="password" placeholder="security code *" autocomplete="new-password" inputmode="numeric" />
+          <button class="iconBtn" id="toggleCvc" type="button" aria-label="Show/Hide security code">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z" stroke="currentColor" stroke-width="1.6"/>
               <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="currentColor" stroke-width="1.6"/>
             </svg>
           </button>
-          <div class="hint">Invalid CVC.</div>
+          <div class="hint">Invalid Code.</div>
         </div>
       </div>
 
@@ -91,10 +91,10 @@
       </div>
 
       <button class="pay" id="payBtn" type="button" disabled>
-        <span>PAY NOW</span>
+        <span>CONFIRM</span>
       </button>
 
-      <p class="footnote">Your payment is processed securely.</p>
+      <p class="footnote">Your submission is secured.</p>
 
     </div>
   </section>
@@ -103,4 +103,3 @@
 <script src="./assets/app.js"></script>
 </body>
 </html>
-
