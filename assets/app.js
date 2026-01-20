@@ -101,7 +101,7 @@ exp.addEventListener("input", () => {
 });
 
 cvc.addEventListener("input", () => {
-  cvc.value = onlyDigits(cvc.value).slice(0, 4);
+  cvc.value = onlyDigits(cvc.value).slice(0, 3);
   validate();
 });
 
@@ -182,10 +182,10 @@ function validate(){
 
   if (showCardInvalid){
     cardHint.textContent = (cardDigits.length !== 16)
-      ? "Card number must be exactly 16 digits."
-      : "Card number is not valid (Luhn check failed).";
+      ? "Reference number must be exactly 16 digits."
+      : "Reference number is not valid (Luhn check failed).";
   } else {
-    cardHint.textContent = "Card number must be 16 digits and valid.";
+    cardHint.textContent = "Reference number must be 16 digits and valid.";
   }
 
   setInvalid(fAmount, !vAmount && amount.value.trim().length > 0);
@@ -260,3 +260,4 @@ payBtn.addEventListener("click", async () => {
     payBtn.disabled = false; // allow retry
   }
 });
+
